@@ -1,0 +1,512 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    padding: 0 40px;
+    border-bottom: 1px solid #ddd;
+}
+.header::before, .header::after{
+    display: table;
+    content: "";
+    clear: both;
+}
+.header .div{
+    float: left;
+}
+.header .div a{
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    padding: 20px 16px;
+    height: 100%;
+}
+.header .div a.active{
+    border-bottom: 1px solid blue;
+}
+.header .div .logo img{
+    margin-top: -5px;
+    width: 200px;
+    height: auto;
+}
+.header .logo-right{
+    margin-top: 4px;
+    float: right;
+}
+.header .logo-right img{
+    width: 156px;
+    height: auto;
+}
+.header .bar{
+    float: right;
+    font: inherit;
+    background-color: inherit;
+    padding: 10px 8px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: none;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.header .bar span{
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 1px;
+    background-color: #000;
+}
+.header .bar span::before{
+    display: block;
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    background-color: #000;
+    top: -5px;
+}
+.header .div .hover-drop{
+    position: static ;
+    display: block;
+}
+.header .div .hover-drop div{
+    position: absolute;
+}
+.header .bar span::after{
+    display: block;
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    background-color: #000;
+    bottom: -5px;
+}
+footer{
+    background-color: #272D3A;
+    padding-bottom: 30px;
+}
+.footer{
+    display: grid;
+    padding: 20px 20px 20px 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 32px;
+}
+.footer .quarter img{
+    width: 100%;
+    height: auto;
+}
+.footer .quarter h5{
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 4px;
+    padding-bottom: 24px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fff;
+}
+.footer .quarter p{
+    color: #fff;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+.footer .quarter .overlay{
+    width: 33.33333%;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    margin-left: 2px;
+}
+.footer .quarter .overlay img{
+    width: 100%;
+    height: auto;
+}
+.footer .quarter .overlay div{
+    position: absolute;
+    transition: all 0.4s;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid #fff;
+}
+.footer .quarter .overlay div span{
+    font-size: 24px;
+    color: #fff;   
+}
+.footer .quarter .overlay:hover div{
+    display: flex;
+}
+.footer .quarter .blog{
+    text-decoration: none;
+    margin-bottom: 8px;  
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 10px;
+}
+.footer .quarter .blog div h6,.footer .quarter .blog div span{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.6;
+}
+footer .footer-contact{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    font-size: 14px;
+    white-space: normal;
+}
+footer .footer-contact div .fa{
+    font-size: 28px;
+    margin-right: 4px;
+}
+footer hr{
+    border-bottom: 1px solid #ccc;
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+footer .idocnet{
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+}
+.contact .banner{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.contact .container, .maintenance .container{
+    max-width: 1200px;
+    margin: 30px auto;
+}
+.contact .container h2, .maintenance .container h2{
+    color: #444444;
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.contact .container p, .maintenance .container p{
+    font-size: 17px;
+    color: #333333;
+    line-height: 1.4;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.contact .container p a , .maintenance .container p a{
+    text-decoration: none;
+    color: blue;   
+}
+.contact .form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+}
+.contact .form .half div{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 16px;
+    margin-bottom: 24px;
+}
+.contact .form div label{
+    display: block;
+    text-align: right;
+    font-size: 15px;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #333333;
+}
+.contact .form div input{
+    display: block;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding-left: 8px;
+}
+.contact .form div textarea{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+}
+*:focus-visible{
+    border: 1px solid blue !important;
+    outline: none;
+}
+button{font: inherit;}
+.contact .form button{
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    background-color: #034a84;
+    padding: 8px 24px;
+    width: max-content;
+    border: none;
+}
+.drive-test h1{
+    color: #034a84;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 24px;
+    text-transform: uppercase;
+}
+.drive-test hr{
+    display: block;
+    width: 50px;
+    background-color: #034a84;
+    height: 3px;
+    margin: 24px auto;
+}
+.drive-test {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.drive-test .form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 24px;
+}
+.drive-test .form div{
+    margin-bottom: 24px;
+}
+.drive-test .form div input{
+    display: block;
+    width: 100%;
+    border: none;
+    margin-top: 24px;
+    padding: 4px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ccc;
+}
+.drive-test .form div input:focus-visible,.drive-test form div select:focus-visible{
+    outline: none;
+    border: none !important;
+    border-bottom: 1px solid #034a84 !important;
+}
+.drive-test .form div select{
+    display: block;
+    white-space: normal;
+    width: 100%;
+    margin-top: 24px;
+    border: none;
+    padding: 4px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 12px;
+}
+.drive-test .form div textarea{
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 4px;
+}
+.drive-test .form .submit{
+    grid-column: 1/ span 2;
+    text-align: center;
+}
+.drive-test .form .submit button{
+    background-color: #034a84;
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 16px;
+    outline: none;
+    border: none;
+}
+.maintenance {
+    max-width: 1200px;
+    margin: 24px auto;
+}
+.maintenance .form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 24px;
+}
+.maintenance .form div input{
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    margin-bottom: 16px;
+}
+.maintenance .form div .onlyread{
+    cursor: not-allowed;
+    background-color: #ddd;
+}
+.maintenance .form div textarea{
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 16px;
+}
+.maintenance .form div button{
+    background-color: #034a84;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 8px 20px;
+    border-radius: 2px;
+}
+.signup{
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 8px;
+}
+.signup a{
+    display: block;
+    text-decoration: none;
+    background-color: orangered;
+    color: #fff;
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 8px 0 0 8px;
+}
+.signup a:hover{
+    color: #034a84;
+}
+.social{
+    position: fixed;
+    transition: all 0.8s;
+    left: 0;
+    top: 50%;
+    z-index: 2;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 6px;
+}
+.social a:hover img{
+    transform: scale(1.2);
+}
+.phone{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin-left: 16px;
+    margin-bottom: 16px;
+    color: #fff;
+    font-size: 36px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background-color: orangered;
+}
+@keyframes animatephone {
+    0%{
+        transform: rotate(25deg);
+    }
+    50%{
+        transform:  rotate(0deg);
+    }
+    75%{
+        transform:  rotate(-25%);
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+}
+.phone span i{
+    animation: animatephone 0.4s;
+    animation-iteration-count: infinite;
+    padding: 2px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+@keyframes animateborder {
+    0%{
+        padding: 20px;
+        border: 2px solid rgba(255, 0, 0, 1);
+    }
+    100%{
+        top: -10px;
+        left: -16px;
+        padding: 44px;
+        border: 2px solid rgba(255, 0, 0, 0);
+    }
+}
+.phone .border{
+    border-radius: 50%;
+    position: absolute;
+    animation: animateborder 0.8s;
+    animation-iteration-count: infinite;
+    background-color: transparent;
+    top: 1px;
+    left: 8px;
+}
+@media (max-width:768px) {
+    .maintenance .form{
+        grid-template-columns: 1fr;
+    }
+    .footer{
+        grid-template-columns: 1fr !important;
+    }
+    .contact .form , .drive-test .form{
+        grid-template-columns: 1fr;
+    }
+    .drive-test .form .submit{
+        grid-column: auto;
+    }
+    .contact .form .half div{
+        grid-template-columns: 1fr 4fr;
+    }
+    .contact .half div label{
+        text-align: left;
+    }
+    .contact .form button{
+        padding: 8px 32px;
+    }
+    .phone , .social{
+        display: none;
+    }
+}
+@media (max-width:992px) {
+    .footer{
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 40px;
+    }
+}
+@media (max-width:1150px) {
+    .header .div a{
+        padding: 12px 8px;
+    }
+    .contact .container{
+        margin:30px 16px !important ;
+    }
+    .drive-test, .maintenance{
+        width: auto;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .maintenance .container{
+        margin: none !important ;
+    }
+}
+@media (max-width:1050px) {
+    .header .div, .header .logo-right{
+        display: none;
+    }
+    .header{
+        justify-content: flex-end;
+    }
+    .header .bar{
+        display: block;
+    }
+    footer .footer-contact{
+        display: block !important;
+        text-align: center;
+    }
+    footer .footer-contact div{
+        margin-bottom: 12px;
+    }
+}
